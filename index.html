@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Restaurant Order System</title>
+ <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Welcome to Hunger Bits</h1>
+    <div id="order-id"></div>
+  </header>
+
+  <section id="menu">
+    <h2>Select Your Food</h2>
+    <div id="food-items">
+        
+      <label><input type="checkbox" value="Burger"> Burger</label>
+      <label><input type="checkbox" value="Pizza"> Pizza</label>
+      <label><input type="checkbox" value="Pasta"> Pasta</label>
+      <label><input type="checkbox" value="Salad"> Salad</label>
+     
+    </div>
+    <button id="order-btn">Order Food</button>
+  </section>
+
+  <div id="order-status">
+    <div id="loading-message" style="display: none;">Preparing your order...</div>
+    <div id="food-images"></div>
+  </div>
+
+  
+  <div id="feedback">
+    <h3>How was your order?</h3>
+    <button onclick="submitFeedback('👍')">👍</button>
+    <button onclick="submitFeedback('👎')">👎</button>
+  </div>
+
+  
+  <audio id="click-sound" src="click.mp3"></audio>
+  <audio id="complete-sound" src="complete.mp3"></audio>
+<script src="./script.js"></script>
+</body>
+</html>
